@@ -1,9 +1,8 @@
-import { getToken } from '@/utils'
+// import { getToken } from '@/utils'
 import { resolveResError } from './helpers'
 
 export function reqResolve(config) {
-
-  config.headers['accessToken'] = getToken() // 让每个请求携带自定义token
+  config.headers['accessToken'] = '4EXQ8zBqjVuGF9NXfE5BX8' // 让每个请求携带自定义token
 
   return config
 }

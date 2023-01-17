@@ -6,11 +6,11 @@ import visualizer from 'rollup-plugin-visualizer'
 import viteCompression from 'vite-plugin-compression'
 
 import { configHtmlPlugin } from './html'
+import { configVantPlugin } from './vant'
 // import unplugin from './unplugin'
 
 export function createVitePlugins(viteEnv, isBuild) {
-  const plugins = [vue(), configHtmlPlugin(viteEnv, isBuild)]
-
+  const plugins = [vue(), configHtmlPlugin(viteEnv, isBuild), configVantPlugin()]
 
   if (viteEnv.VITE_USE_COMPRESS) {
     plugins.push(viteCompression({ algorithm: viteEnv.VITE_COMPRESS_TYPE || 'gzip' }))
